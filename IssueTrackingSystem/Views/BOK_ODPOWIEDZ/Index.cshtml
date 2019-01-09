@@ -1,0 +1,52 @@
+﻿@model IEnumerable<IssueTrackingSystem.Models.BOK_ODPOWIEDZ>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.BOK_OPERATOR.NAZWA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BOK_ZGLOSZENIE.OPIS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OPIS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DATA_ODPOWIEDZI)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.BOK_OPERATOR.NAZWA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BOK_ZGLOSZENIE.OPIS)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OPIS)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DATA_ODPOWIEDZI)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID_ODPOWIEDZI }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID_ODPOWIEDZI }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID_ODPOWIEDZI })
+        </td>
+    </tr>
+}
+
+</table>

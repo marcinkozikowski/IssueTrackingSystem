@@ -1,0 +1,52 @@
+﻿@model IEnumerable<IssueTrackingSystem.Models.BOK_ADRES>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ULICA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MIASTO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.KOD_POCZTOWY)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.POCZTA)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ULICA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MIASTO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.KOD_POCZTOWY)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.POCZTA)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID_ADRES }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID_ADRES }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID_ADRES })
+        </td>
+    </tr>
+}
+
+</table>

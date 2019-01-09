@@ -1,0 +1,51 @@
+﻿@model IssueTrackingSystem.Models.BOK_ADRES
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>BOK_ADRES</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ULICA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ULICA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MIASTO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MIASTO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.KOD_POCZTOWY)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KOD_POCZTOWY)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.POCZTA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.POCZTA)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID_ADRES }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

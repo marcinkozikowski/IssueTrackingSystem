@@ -1,0 +1,51 @@
+﻿@model IssueTrackingSystem.Models.BOK_ODPOWIEDZ
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>BOK_ODPOWIEDZ</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.BOK_OPERATOR.NAZWA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BOK_OPERATOR.NAZWA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BOK_ZGLOSZENIE.OPIS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BOK_ZGLOSZENIE.OPIS)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OPIS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OPIS)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DATA_ODPOWIEDZI)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DATA_ODPOWIEDZI)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID_ODPOWIEDZI }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

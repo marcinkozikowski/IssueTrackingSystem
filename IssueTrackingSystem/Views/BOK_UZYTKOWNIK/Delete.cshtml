@@ -1,0 +1,65 @@
+﻿@model IssueTrackingSystem.Models.BOK_UZYTKOWNIK
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>BOK_UZYTKOWNIK</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.BOK_KLIENT.NAZWA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BOK_KLIENT.NAZWA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BOK_OPERATOR.NAZWA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BOK_OPERATOR.NAZWA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LOGIN)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LOGIN)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PASSWORD_HASH)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PASSWORD_HASH)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AKTYWNY)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AKTYWNY)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
