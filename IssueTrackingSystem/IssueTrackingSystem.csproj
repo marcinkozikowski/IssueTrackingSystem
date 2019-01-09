@@ -45,10 +45,24 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Oracle.ManagedDataAccess, Version=4.122.18.3, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <HintPath>..\packages\Oracle.ManagedDataAccess.18.3.0\lib\net40\Oracle.ManagedDataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.ManagedDataAccess.EntityFramework, Version=6.122.18.3, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <HintPath>..\packages\Oracle.ManagedDataAccess.EntityFramework.18.3.0\lib\net45\Oracle.ManagedDataAccess.EntityFramework.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -126,10 +140,31 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\BOK_ADRESController.cs" />
+    <Compile Include="Controllers\BOK_DANE_KONTAKTOWEController.cs" />
+    <Compile Include="Controllers\BOK_KLIENTController.cs" />
+    <Compile Include="Controllers\BOK_ODPOWIEDZController.cs" />
+    <Compile Include="Controllers\BOK_OPERATORController.cs" />
+    <Compile Include="Controllers\BOK_PRIORYTETController.cs" />
+    <Compile Include="Controllers\BOK_STATUSController.cs" />
+    <Compile Include="Controllers\BOK_UZYTKOWNIKController.cs" />
+    <Compile Include="Controllers\BOK_ZALACZNIKController.cs" />
+    <Compile Include="Controllers\BOK_ZGLOSZENIEController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\BOK_ADRES.cs" />
+    <Compile Include="Models\BOK_DANE_KONTAKTOWE.cs" />
+    <Compile Include="Models\BOK_KLIENT.cs" />
+    <Compile Include="Models\BOK_ODPOWIEDZ.cs" />
+    <Compile Include="Models\BOK_OPERATOR.cs" />
+    <Compile Include="Models\BOK_PRIORYTET.cs" />
+    <Compile Include="Models\BOK_STATUS.cs" />
+    <Compile Include="Models\BOK_UZYTKOWNIK.cs" />
+    <Compile Include="Models\BOK_ZALACZNIK.cs" />
+    <Compile Include="Models\BOK_ZGLOSZENIE.cs" />
+    <Compile Include="Models\Model1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -168,10 +203,59 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\BOK_ADRES\Create.cshtml" />
+    <Content Include="Views\BOK_ADRES\Delete.cshtml" />
+    <Content Include="Views\BOK_ADRES\Details.cshtml" />
+    <Content Include="Views\BOK_ADRES\Edit.cshtml" />
+    <Content Include="Views\BOK_ADRES\Index.cshtml" />
+    <Content Include="Views\BOK_DANE_KONTAKTOWE\Create.cshtml" />
+    <Content Include="Views\BOK_DANE_KONTAKTOWE\Delete.cshtml" />
+    <Content Include="Views\BOK_DANE_KONTAKTOWE\Details.cshtml" />
+    <Content Include="Views\BOK_DANE_KONTAKTOWE\Edit.cshtml" />
+    <Content Include="Views\BOK_DANE_KONTAKTOWE\Index.cshtml" />
+    <Content Include="Views\BOK_KLIENT\Create.cshtml" />
+    <Content Include="Views\BOK_KLIENT\Delete.cshtml" />
+    <Content Include="Views\BOK_KLIENT\Details.cshtml" />
+    <Content Include="Views\BOK_KLIENT\Edit.cshtml" />
+    <Content Include="Views\BOK_KLIENT\Index.cshtml" />
+    <Content Include="Views\BOK_ODPOWIEDZ\Create.cshtml" />
+    <Content Include="Views\BOK_ODPOWIEDZ\Delete.cshtml" />
+    <Content Include="Views\BOK_ODPOWIEDZ\Details.cshtml" />
+    <Content Include="Views\BOK_ODPOWIEDZ\Edit.cshtml" />
+    <Content Include="Views\BOK_ODPOWIEDZ\Index.cshtml" />
+    <Content Include="Views\BOK_OPERATOR\Create.cshtml" />
+    <Content Include="Views\BOK_OPERATOR\Delete.cshtml" />
+    <Content Include="Views\BOK_OPERATOR\Details.cshtml" />
+    <Content Include="Views\BOK_OPERATOR\Edit.cshtml" />
+    <Content Include="Views\BOK_OPERATOR\Index.cshtml" />
+    <Content Include="Views\BOK_PRIORYTET\Create.cshtml" />
+    <Content Include="Views\BOK_PRIORYTET\Delete.cshtml" />
+    <Content Include="Views\BOK_PRIORYTET\Details.cshtml" />
+    <Content Include="Views\BOK_PRIORYTET\Edit.cshtml" />
+    <Content Include="Views\BOK_PRIORYTET\Index.cshtml" />
+    <Content Include="Views\BOK_STATUS\Create.cshtml" />
+    <Content Include="Views\BOK_STATUS\Delete.cshtml" />
+    <Content Include="Views\BOK_STATUS\Details.cshtml" />
+    <Content Include="Views\BOK_STATUS\Edit.cshtml" />
+    <Content Include="Views\BOK_STATUS\Index.cshtml" />
+    <Content Include="Views\BOK_UZYTKOWNIK\Create.cshtml" />
+    <Content Include="Views\BOK_UZYTKOWNIK\Delete.cshtml" />
+    <Content Include="Views\BOK_UZYTKOWNIK\Details.cshtml" />
+    <Content Include="Views\BOK_UZYTKOWNIK\Edit.cshtml" />
+    <Content Include="Views\BOK_UZYTKOWNIK\Index.cshtml" />
+    <Content Include="Views\BOK_ZGLOSZENIE\Create.cshtml" />
+    <Content Include="Views\BOK_ZGLOSZENIE\Delete.cshtml" />
+    <Content Include="Views\BOK_ZGLOSZENIE\Details.cshtml" />
+    <Content Include="Views\BOK_ZGLOSZENIE\Edit.cshtml" />
+    <Content Include="Views\BOK_ZGLOSZENIE\Index.cshtml" />
+    <Content Include="Views\BOK_ZALACZNIK\Create.cshtml" />
+    <Content Include="Views\BOK_ZALACZNIK\Delete.cshtml" />
+    <Content Include="Views\BOK_ZALACZNIK\Details.cshtml" />
+    <Content Include="Views\BOK_ZALACZNIK\Edit.cshtml" />
+    <Content Include="Views\BOK_ZALACZNIK\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -185,6 +269,9 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
