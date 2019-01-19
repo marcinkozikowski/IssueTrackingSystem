@@ -140,6 +140,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\BOK_ADRESController.cs" />
     <Compile Include="Controllers\BOK_DANE_KONTAKTOWEController.cs" />
     <Compile Include="Controllers\BOK_KLIENTController.cs" />
@@ -253,6 +254,7 @@
     <Content Include="Views\BOK_ZALACZNIK\Details.cshtml" />
     <Content Include="Views\BOK_ZALACZNIK\Edit.cshtml" />
     <Content Include="Views\BOK_ZALACZNIK\Index.cshtml" />
+    <Content Include="Views\Admin\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
