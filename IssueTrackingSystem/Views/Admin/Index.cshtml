@@ -10,17 +10,17 @@
     <div class="col-md-3">
         <h2>Adresy</h2>
         <p>Baza adresów użytkowników, klientów oraz operatorów.</p>
-        @Html.ActionLink("Adresy", "Index", "BOK_ADRES",new { @class = "btn btn-primary" }) 
+        @Html.ActionLink("Adresy", "Index", "BOK_ADRES",  null,new { @class = "btn btn-primary" })
     </div>
     <div class="col-md-3">
         <h2>Dane Kontaktowe</h2>
         <p>Dana kontaktowe klientów, urzytkowników, operatorów.</p>
-        <p>@Html.ActionLink("Dane kontaktowe", "Index","BOK_DANE_KONTAKTOWE", new { @class = "btn btn-primary" }) </p>
+        <p>@Html.ActionLink("Dane kontaktowe", "Index","BOK_DANE_KONTAKTOWE",null, new { @class = "btn btn-primary" }) </p>
     </div>
     <div class="col-md-3">
         <h2>Klienci</h2>
         <p>Baza wszystkich klientów w systemie.</p>
-        <p>@Html.ActionLink("Klienci", "Index","BOK_KLIENT", new { @class = "btn btn-primary" }) </p>
+        <p>@Html.ActionLink("Klienci", "Index","BOK_KLIENT",null, new { @class = "btn btn-primary" }) </p>
     </div>
 </div>
 
@@ -30,17 +30,17 @@
         <p>
             Opowiedzi do zgłosoznych problemów.
         </p>
-        <p>@Html.ActionLink("Odpowiedzi", "Index","BOK)ODPOWIEDZ", new { @class = "btn btn-primary" }) </p>
+        <p>@Html.ActionLink("Odpowiedzi", "Index","BOK_ODPOWIEDZ",null, new { @class = "btn btn-primary" }) </p>
     </div>
     <div class="col-md-3">
         <h2>Operatorzy</h2>
         <p>Baza danych wszystkich operatorów zajmujących się rozwiązywaniem usterek.</p>
-        <p>@Html.ActionLink("Operatorzy", "Index","BOK_OPERATOR", new { @class = "btn btn-primary" }) </p>
+        <p>@Html.ActionLink("Operatorzy", "Index","BOK_OPERATOR",null, new { @class = "btn btn-primary" }) </p>
     </div>
     <div class="col-md-3">
         <h2>Priorytety</h2>
         <p>Definiowanie prirytetów systemowych, które są wykorzystywane podczas zgłaszania usterek.</p>
-        <p>@Html.ActionLink("Priorytety", "Index","BOK_PRIORYTET", new { @class = "btn btn-primary" }) </p>
+        <p>@Html.ActionLink("Priorytety", "Index","BOK_PRIORYTET",null, new { @class = "btn btn-primary" }) </p>
     </div>
 </div>
 
@@ -50,17 +50,17 @@
         <p>
             Definiowanie statusów obsługi zgłoszeń, które są widoczne dla klientów, operatorów podczas obsługi zgłoszęń.
         </p>
-        <p>@Html.ActionLink("Statusy", "Index","BOK_STATUS", new { @class = "btn btn-primary" }) </p>
+        <p>@Html.ActionLink("Statusy", "Index","BOK_STATUS",null, new { @class = "btn btn-primary" }) </p>
     </div>
     <div class="col-md-3">
         <h2>Użytkownicy</h2>
         <p>Wszyscy użytkownicy systemu, tzn. klienci, operatorzy, którzy maja konta użytkownika systemu.</p>
-        <p>@Html.ActionLink("Użytkownicy", "Index","BOK_UZYTKOWNIK", new { @class = "btn btn-primary" }) </p>
+        <p>@Html.ActionLink("Użytkownicy", "Index","BOK_UZYTKOWNIK",null, new { @class = "btn btn-primary" }) </p>
     </div>
     <div class="col-md-3">
         <h2>Załączniki</h2>
         <p>Wszelkiego rodzaju załączniki dołączone do zgłoszeń.</p>
-        <p>@Html.ActionLink("Załączniki", "Index","BOK_ZALACZNIK", new { @class = "btn btn-primary" }) </p>
+        <p>@Html.ActionLink("Załączniki", "Index","BOK_ZALACZNIK", null,new { @class = "btn btn-primary" }) </p>
     </div>
 </div>
 
@@ -70,7 +70,7 @@
         <p>
             Wszystkie zgłoszenia zdefiniowane przez klientów w celu, które trafią do operatorów w celu rozwiązania problemu.
         </p>
-        <p>@Html.ActionLink("Zgłoszenia", "INDEX","BOK_ZGLOESZENIE", new { @class = "btn btn-primary" }) </p>
+        <p>@Html.ActionLink("Zgłoszenia", "INDEX","BOK_ZGLOSZENIE", null,new { @class = "btn btn-primary" }) </p>
     </div>
 </div>
 

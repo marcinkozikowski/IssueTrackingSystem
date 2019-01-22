@@ -3,3 +3,5 @@
 ################################################################################
 
 /.vs
+/IssueTrackingSystem/obj/Debug
+/IssueTrackingSystem/bin
