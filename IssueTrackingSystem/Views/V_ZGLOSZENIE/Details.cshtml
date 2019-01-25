@@ -1,0 +1,75 @@
+﻿@model IssueTrackingSystem.Models.V_ZGLOSZENIE
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>V_ZGLOSZENIE</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.KLIENT)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KLIENT)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OPERATOR)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OPERATOR)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.STATUS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.STATUS)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PRIORYTET)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRIORYTET)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OPIS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OPIS)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DATA_UTWORZENIA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DATA_UTWORZENIA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DATA_ZAKONCZENIA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DATA_ZAKONCZENIA)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

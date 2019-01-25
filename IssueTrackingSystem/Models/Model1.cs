@@ -23,6 +23,7 @@ namespace IssueTrackingSystem.Models
         public virtual DbSet<BOK_ZALACZNIK> BOK_ZALACZNIK { get; set; }
         public virtual DbSet<BOK_ZGLOSZENIE> BOK_ZGLOSZENIE { get; set; }
         public virtual DbSet<V_KLIENT> V_KLIENT { get; set; }
+        public virtual DbSet<V_ZGLOSZENIE> V_ZGLOSZENIE { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -205,6 +206,30 @@ namespace IssueTrackingSystem.Models
 
             modelBuilder.Entity<V_KLIENT>()
                 .Property(e => e.INNY)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<V_ZGLOSZENIE>()
+                .Property(e => e.ID)
+                .HasPrecision(38, 0);
+
+            modelBuilder.Entity<V_ZGLOSZENIE>()
+                .Property(e => e.KLIENT)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<V_ZGLOSZENIE>()
+                .Property(e => e.OPERATOR)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<V_ZGLOSZENIE>()
+                .Property(e => e.STATUS)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<V_ZGLOSZENIE>()
+                .Property(e => e.PRIORYTET)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<V_ZGLOSZENIE>()
+                .Property(e => e.OPIS)
                 .IsUnicode(false);
         }
     }
