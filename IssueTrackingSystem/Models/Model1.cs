@@ -22,6 +22,7 @@ namespace IssueTrackingSystem.Models
         public virtual DbSet<BOK_UZYTKOWNIK> BOK_UZYTKOWNIK { get; set; }
         public virtual DbSet<BOK_ZALACZNIK> BOK_ZALACZNIK { get; set; }
         public virtual DbSet<BOK_ZGLOSZENIE> BOK_ZGLOSZENIE { get; set; }
+        public virtual DbSet<V_KLIENT> V_KLIENT { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -169,6 +170,42 @@ namespace IssueTrackingSystem.Models
                 .HasMany(e => e.BOK_ZALACZNIK)
                 .WithOptional(e => e.BOK_ZGLOSZENIE)
                 .HasForeignKey(e => e.ID_ZGLOSZENIA);
+
+            modelBuilder.Entity<V_KLIENT>()
+                .Property(e => e.LOGIN)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<V_KLIENT>()
+                .Property(e => e.IDKLIENTA)
+                .HasPrecision(38, 0);
+
+            modelBuilder.Entity<V_KLIENT>()
+                .Property(e => e.KLIENT)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<V_KLIENT>()
+                .Property(e => e.ULICA)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<V_KLIENT>()
+                .Property(e => e.MIASTO)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<V_KLIENT>()
+                .Property(e => e.POCZTA)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<V_KLIENT>()
+                .Property(e => e.EMAIL)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<V_KLIENT>()
+                .Property(e => e.TELEFON)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<V_KLIENT>()
+                .Property(e => e.INNY)
+                .IsUnicode(false);
         }
     }
 }

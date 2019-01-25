@@ -1,0 +1,82 @@
+﻿@model IEnumerable<IssueTrackingSystem.Models.V_KLIENT>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.LOGIN)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.KLIENT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ULICA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MIASTO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.KOD_POCZTOWY)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.POCZTA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EMAIL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TELEFON)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.INNY)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.LOGIN)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.KLIENT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ULICA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MIASTO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.KOD_POCZTOWY)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.POCZTA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EMAIL)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TELEFON)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.INNY)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.IDKLIENTA }) |
+            @Html.ActionLink("Details", "Details", new { id=item.IDKLIENTA }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.IDKLIENTA })
+        </td>
+    </tr>
+}
+
+</table>

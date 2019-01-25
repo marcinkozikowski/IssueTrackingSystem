@@ -166,7 +166,9 @@
     <Compile Include="Models\BOK_ZALACZNIK.cs" />
     <Compile Include="Models\BOK_ZGLOSZENIE.cs" />
     <Compile Include="Models\Model1.cs" />
+    <Compile Include="Models\V_KLIENT.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Controllers\V_KLIENTController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />
@@ -255,6 +257,11 @@
     <Content Include="Views\BOK_ZALACZNIK\Edit.cshtml" />
     <Content Include="Views\BOK_ZALACZNIK\Index.cshtml" />
     <Content Include="Views\Admin\Index.cshtml" />
+    <Content Include="Views\V_KLIENT\Create.cshtml" />
+    <Content Include="Views\V_KLIENT\Delete.cshtml" />
+    <Content Include="Views\V_KLIENT\Details.cshtml" />
+    <Content Include="Views\V_KLIENT\Edit.cshtml" />
+    <Content Include="Views\V_KLIENT\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
